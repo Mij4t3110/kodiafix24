@@ -506,23 +506,23 @@
         <p>&copy; 2026 Kodiafix24. Sva prava zadržana.</p>
     </footer>
 
-    <!-- JAVASCRIPT ZA INTERAKTIVNI BURGER MENI -->
+    <!-- JAVASCRIPT ZA GLAVNI MENI I HARMONIKA PODMENI -->
     <script>
         const burgerMenu = document.getElementById('burgerMenu');
         const sideMenu = document.getElementById('sideMenu');
+        const submenuToggle = document.getElementById('submenuToggle');
+        const servicesSubmenu = document.getElementById('servicesSubmenu');
 
+        // Otvaranje / zatvaranje glavnog menija (Burger u X)
         burgerMenu.addEventListener('click', () => {
             burgerMenu.classList.toggle('open');
             sideMenu.classList.toggle('active');
         });
 
-        // Zatvori meni kada se klikne na neki link unutar njega
-        const menuLinks = document.querySelectorAll('nav ul li a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                burgerMenu.classList.remove('open');
-                sideMenu.classList.remove('active');
-            });
+        // Kontrola harmonika podmenija za Usluge
+        submenuToggle.addEventListener('click', (e) => {
+            e.preventDefault(); // Sprečava skok stranice na vrh
+            servicesSubmenu.classList.toggle('open');
         });
     </script>
 </body>
