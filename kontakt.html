@@ -217,10 +217,9 @@
         }
 
         /* WA I VIBER DUGME */
-        /* DIZAJN ZA CASKANJE I KRUGOVE */
-.chat-izbor-kontejner {
+        .chat-izbor-kontejner {
     background-color: var(--bg-deep);
-    padding: 40px 20px;
+    padding: 40px 30px;
     border-radius: 4px;
     text-align: center;
     border: 1px solid rgba(255, 107, 0, 0.15);
@@ -228,22 +227,23 @@
 }
 
 .chat-naslov {
-    font-size: 16px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6; /* Komotniji razmak između redova */
     color: var(--text-light);
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    max-width: 650px; /* Sprečava da se tekst previše raširi na velikim ekranima */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .kruzni-dugmici-flex {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px; /* Razmak između dva kruga */
+    gap: 30px;
 }
 
-/* BAZIČNI STIL ZA KRUG */
 .krug-btn {
     width: 70px;
     height: 70px;
@@ -256,47 +256,28 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Veličina ikonica unutar kruga */
 .krug-btn svg {
     width: 35px;
     height: 35px;
-    fill: #ffffff; /* Bela boja logotipa unutar kruga */
+    fill: #ffffff;
 }
 
-/* WHATSAPP SPECIFIČNOST */
-.whatsapp-krug {
-    background-color: #25D366;
-}
+.whatsapp-krug { background-color: #25D366; }
+.viber-krug { background-color: #7360F2; }
 
-/* VIBER SPECIFIČNOST */
-.viber-krug {
-    background-color: #7360F2;
-}
-
-/* EFEKAT KADA NEKO PREĐE MIŠEM ILI KLIKNE PRSTOM */
 .krug-btn:hover {
-    transform: scale(1.1); /* Blago se poveća krug */
+    transform: scale(1.1);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
 }
 
-.whatsapp-krug:hover {
-    background-color: #20ba56;
-}
+.whatsapp-krug:hover { background-color: #20ba56; }
+.viber-krug:hover { background-color: #6250db; }
 
-.viber-krug:hover {
-    background-color: #6250db;
-}
-
-/* Optimizacija za male ekrane mobilnih */
 @media (max-width: 480px) {
-    .krug-btn {
-        width: 65px;
-        height: 65px;
-    }
-    .krug-btn svg {
-        width: 32px;
-        height: 32px;
-    }
+    .chat-izbor-kontejner { padding: 30px 20px; }
+    .chat-naslov { font-size: 14px; }
+    .krug-btn { width: 65px; height: 65px; }
+    .krug-btn svg { width: 32px; height: 32px; }
 }
 
         /* STICKY DUGME ZA POZIV */
