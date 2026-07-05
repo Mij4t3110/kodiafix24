@@ -328,33 +328,39 @@
             margin-bottom: 10px;
         }
 
-        /* STICKY DUGME ZA POZIV (UVEK PUTUJE NA DNU) */
-        .sticky-call-btn {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: var(--accent-orange);
-            color: var(--text-light);
-            text-align: center;
-            text-decoration: none;
-            padding: 18px;
-            font-size: 20px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            z-index: 1000;
-            box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
-            transition: background-color 0.2s;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-        }
+        /* MODERNO PLUTAJUĆE DUGME SA ZAKRIVLJENIM IVICAMA */
+.sticky-call-btn {
+    position: fixed;
+    bottom: 20px;              /* Odmaknuto od samog dna ekrana */
+    left: 50%;                 /* Centriranje */
+    transform: translateX(-50%); /* Savršeno centriranje na sredinu */
+    width: 90%;                /* Širina na mobilnim telefonima */
+    max-width: 400px;          /* Maksimalna širina da se ne bi previše raširilo na kompjuteru */
+    background-color: var(--accent-orange);
+    color: var(--text-light);
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 25px;        /* Komotan prostor unutar dugmeta */
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1000;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5); /* Jača senka jer dugme sada "lebdi" */
+    transition: background-color 0.2s, transform 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;       /* Potpuno zaobljene ivice (oblik pilule/pravougaonika) */
+}
 
-        .sticky-call-btn:hover {
-            background-color: var(--accent-hover);
-        }
+/* EFEKAT KADA SE PREĐE MIŠEM ILI KLIKNE PRSTOM */
+.sticky-call-btn:hover {
+    background-color: var(--accent-hover);
+    /* Zadržavamo centriranje i dodajemo blago povećanje za bolji osećaj kliktaja */
+    transform: translateX(-50%) scale(1.03); 
+}
 
         /* FOOTER */
         footer {
@@ -370,7 +376,7 @@
         @media (max-width: 768px) {
             .hero h1 { font-size: 30px; }
             .hero p { font-size: 15px; }
-            nav { width: 20%; } /* Zauzima 75% ekrana na telefonu */
+            nav { width: 75%; } /* Zauzima 75% ekrana na telefonu */
             .section-title { font-size: 26px; }
         }
     </style>
