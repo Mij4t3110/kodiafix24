@@ -417,39 +417,15 @@
         </div>
 
         <!-- DESNA KOLONA: FORMA SA ZAKACIVANJEM SLIKE -->
-        <!-- Ugrađen enctype="multipart/form-data" kako bi slanje slika radilo na serveru -->
-        <div class="contact-form">
-            <h2>Prijavite Havariju</h2>
-            <!-- Glavni tag forme koji šalje podatke na Web3Forms server -->
-<!-- DODATO: enctype="multipart/form-data" je obavezan za slanje slika! -->
-<form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+        <div class="hitni-chat-sistemi" style="margin-top: 20px;">
+    <a href="https://wa.me/381693110944?text=Zdravo,%20potrebna%20mi%20je%20hitna%20intervencija." class="inline-btn" style="background-color: #25D366; margin-bottom: 10px; display: block; text-align: center;">
+        💬 Pošalji na WhatsApp
+    </a>
 
-    <!-- Tvoj ključ koji si dobio na mejl -->
-    <input type="hidden" name="access_key" value="4f3f5b00-47e2-4fb6-8642-ddb86c09928b">
-    <input type="hidden" name="subject" value="⚠️ NOVA HITNA INTERVENCIJA SA SLIKOM - Kodiafix24">
-    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-    <div class="form-group">
-        <input type="text" name="Ime klijenta" placeholder="Vaše Ime i Prezime" required>
-    </div>
-    
-    <div class="form-group">
-        <input type="tel" name="Broj telefona" placeholder="Vaš Broj Telefona" required>
-    </div>
-    
-    <div class="form-group">
-        <textarea name="Opis kvara / Usluga" placeholder="Opišite šta je potrebno hitno popraviti..." required></textarea>
-    </div>
-
-    <!-- NOVO POLJE: Izbor ili slikanje kvara direktno kamerom -->
-    <div class="form-group file-upload-wrapper">
-        <label for="slika-kvara" class="file-label">Učitajte ili uslikajte kvar (opciono):</label>
-        <input type="file" id="slika-kvara" name="Slika kvara" accept="image/*" class="file-input">
-    </div>
-
-    <button type="submit" class="inline-btn">Pošalji zahtev</button>
-</form>
-        </div>
+    <a href="viber://chat?number=%2B381693110" class="inline-btn" style="background-color: #7360F2; display: block; text-align: center;">
+        💜 Pošalji na Viber
+    </a>
+</div>
 
     </div>
 
