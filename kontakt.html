@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | Kodiafix24 - Hitne Intervencije 00-24h</title>
+    <meta name="description" content="Kontaktirajte Kodiafix24 za hitne građevinske intervencije. Prijavite problem, pošaljite sliku oštećenja i naša ekipa stiže odmah. Dostupni smo 24 sata dnevno.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google Fontovi -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* PODEŠAVANJE OSNOVE - ISTA KAO NA INDEXU */
+        :root {
+            --bg-dark: #1e2229;
+            --bg-deep: #14171c;
+            --accent-orange: #ff6b00;
+            --accent-hover: #e05e00;
+            --text-light: #f4f4f6;
+            --text-muted: #a0a5b0;
+            --input-bg: #282d37;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            padding-bottom: 70px;
+        }
+
+        /* HEADER I NAVIGACIJA */
+        header {
+            background-color: var(--bg-deep);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--accent-orange);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent-orange);
+        }
+
+        .burger-menu {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            z-index: 1001;
+        }
+
+        .burger-menu span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: var(--text-light);
+            border-radius: 3px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .burger-menu.open span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+            background-color: var(--accent-orange);
+        }
+
+        .burger-menu.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger-menu.open span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+            background-color: var(--accent-orange);
+        }
+
+        /* PADAJUĆI MENI SA PODMENIJEM ZA USLUGE */
+        nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 300px;
+            height: 100vh;
+            background-color: var(--bg-deep);
+            padding: 100px 30px 40px 30px;
+            transition: right 0.4s ease-in-out;
+            z-index: 999;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+            border-left: 1px solid rgba(255,107,0,0.2);
+            overflow-y: auto;
+        }
+
+        nav.active {
+            right: 0;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-bottom: 20px;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: color 0.2s;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-orange);
+        }
+
+        /* Stilovi za Podmeni (Usluge) */
+        .has-submenu > a::after {
+            content: ' ▾';
+            font-size: 14px;
+            color: var(--accent-orange);
+        }
+
+        .submenu {
+            list-style: none;
+            padding-left: 15px;
+            margin-top: 10px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .submenu.open {
+            max-height: 300px; /* Dovoljno prostora za 5 stavki */
+        }
+
+        .submenu li {
+            margin-bottom: 10px;
+        }
+
+        .submenu li a {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* KONTAKT STRANICA GLAVNI DEO */
+        .container {
+            max-width: 1200px;
+            margin: 140px auto 60px auto;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h1 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .contact-info h1 span {
+            color: var(--accent-orange);
+        }
+
+        .contact-info p.subtitle {
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+
+        .info-block {
+            margin-bottom: 30px;
+        }
+
+        .info-block h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-orange);
+            margin-bottom: 5px;
+        }
+
+        .info-block p, .info-block a {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .info-block a:hover {
+            color: var(--accent-orange);
+        }
+
+        /* FORMA ZA UPIT SA SLIKOM */
+        .contact-form {
+            background-color: var(--bg-deep);
+            padding: 40px;
+            border-radius: 4px;
+            border-top: 4px solid var(--accent-orange);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .contact-form h2 {
+            font-size: 24px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            color: var(--text-muted);
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            background-color: var(--input-bg);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 12px 15px;
+            color: var(--text-light);
+            font-size: 15px;
+            border-radius: 4px;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-orange);
+        }
+
+        /* Dugme za izbor slike sa telefona/kompjutera */
+        .form-group input[type="file"] {
+            background-color: transparent;
+            border: none;
+            padding: 5px 0;
+            cursor: pointer;
+        }
+
+        .form-group input[type="file"]::file-selector-button {
+            background-color: var(--input-bg);
+            color: var(--text-light);
+            border: 1px solid rgba(255,107,0,0.4);
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-right: 10px;
+            transition: background-color 0.2s;
+        }
+
+        .form-group input[type="file"]::file-selector-button:hover {
+            background-color: rgba(255,107,0,0.1);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: var(--accent-orange);
+            color: var(--text-light);
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* STICKY DUGME ZA POZIV */
+        .sticky-call-btn {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--accent-orange);
+            color: var(--text-light);
+            text-align: center;
+            text-decoration: none;
+            padding: 18px;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 1000;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
+            transition: background-color 0.2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sticky-call-btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #0f1115;
+            padding: 30px 5%;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 14px;
+            border-top: 1px solid rgba(255,107,0,0.1);
+            margin-top: 60px;
+        }
+
+        /* RESPONSIVENESS */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                margin-top: 120px;
+                gap: 40px;
+            }
+            .contact-info h1 { font-size: 28px; }
+            .info-block p, .info-block a { font-size: 18px; }
+            nav { width: 75%; }
+            .contact-form { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER & NAVIGACIJA -->
+    <header>
+        <div class="logo">Kodia<span>fix24</span></div>
+        <div class="burger-menu" id="burgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <nav id="sideMenu">
+        <ul>
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="#">O nama</a></li>
+            <li class="has-submenu">
+                <a href="#" id="submenuToggle">Usluge</a>
+                <ul class="submenu" id="servicesSubmenu">
+                    <li><a href="#">Popravka Krova</a></li>
+                    <li><a href="#">Vodoinstalater</a></li>
+                    <li><a href="#">Bravarija i Staklo</a></li>
+                    <li><a href="#">Električar</a></li>
+                    <li><a href="#">Rušenje i Bezbednost</a></li>
+                </ul>
+            </li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <!-- GLAVNI SADRŽAJ KONTAKT STRANICE -->
+    <div class="container">
+        
+        <!-- LEVA KOLONA: INFO PODACI -->
+        <div class="contact-info">
+            <h1>Stižemo <span>Odmah</span></h1>
+            <p class="subtitle">Bilo da vam je potrebna hitna intervencija u sred noći ili želite procenu i sanaciju štete, naš tim vam stoji na raspolaganju 24 sata dnevno, 7 dana u nedelji.</p>
+            
+            <div class="info-block">
+                <h3>Dežurni Telefon</h3>
+                <a href="tel:+381601234567">060 / 123 - 4567</a>
+            </div>
+
+            <div class="info-block">
+                <h3>E-mail za Upite i Slike</h3>
+                <a href="mailto:office@kodiafix24.rs">office@kodiafix24.rs</a>
+            </div>
+
+            <div class="info-block">
+                <h3>Radno Vreme</h3>
+                <p>00 - 24h (Non-Stop, Vikendom i Praznicima)</p>
+            </div>
+
+            <div class="info-block">
+                <h3>Sedište i Lokacija</h3>
+                <p>Beograd, Srbija</p>
+            </div>
+        </div>
+
+        <!-- DESNA KOLONA: FORMA SA ZAKACIVANJEM SLIKE -->
+        <!-- Ugrađen enctype="multipart/form-data" kako bi slanje slika radilo na serveru -->
+        <div class="contact-form">
+            <h2>Prijavite Havariju</h2>
+            <form action="#" method="POST" enctype="multipart/form-data">
+                
+                <div class="form-group">
+                    <label for="name">Ime i Prezime</label>
+                    <input type="text" id="name" name="name" placeholder="Vaše ime" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Tačna Adresa / Lokacija</label>
+                    <input type="text" id="address" name="address" placeholder="Ulica, broj i deo grada" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail Adresa</label>
+                    <input type="email" id="email" name="email" placeholder="Vaš email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Opis kvara ili oštećenja</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Detaljno opišite šta je potrebno popraviti..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="image">Uslikajte i zakačite sliku kvara (Opciono)</label>
+                    <input type="file" id="image" name="image" accept="image/*">
+                </div>
+
+                <button type="submit" class="submit-btn">Pošalji Prijavu</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- STICKY DUGME ZA POZIV -->
+    <a href="tel:+381601234567" class="sticky-call-btn">
+        📞 POZOVI ODMAH: 060/123-4567
+    </a>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Kodiafix24. Sva prava zadržana. Ponosno optimizovano za brzinu i SEO.</p>
+    </footer>
+
+    <!-- JAVASCRIPT ZA GLAVNI MENI I HARMONIKA PODMENI -->
+    <script>
+        const burgerMenu = document.getElementById('burgerMenu');
+        const sideMenu = document.getElementById('sideMenu');
+        const submenuToggle = document.getElementById('submenuToggle');
+        const servicesSubmenu = document.getElementById('servicesSubmenu');
+
+        // Otvaranje / zatvaranje glavnog menija (Burger u X)
+        burgerMenu.addEventListener('click', () => {
+            burgerMenu.classList.toggle('open');
+            sideMenu.classList.toggle('active');
+        });
+
+        // Kontrola harmonika podmenija za Usluge
+        submenuToggle.addEventListener('click', (e) => {
+            e.preventDefault(); // Sprečava skok stranice na vrh
+            servicesSubmenu.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
