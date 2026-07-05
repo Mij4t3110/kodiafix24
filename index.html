@@ -121,18 +121,19 @@
             transition: all 0.3s ease-in-out;
         }
 
-        /* Kada je meni otvoren - pretvaranje u X */
-        .burger-menu.open span:nth-child(1) {
-            transform: translateY(9px) rotate(45deg);
+       .burger-menu.open span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg) scale(1.1);
             background-color: var(--accent-orange);
         }
 
         .burger-menu.open span:nth-child(2) {
             opacity: 0;
+            transform: scaleX(0) !important; /* Ovo je ključ! Skuplja crticu horizontalno na nulu */
+    transition: transform 0.2s ease, opacity 0.2s ease;
         }
 
         .burger-menu.open span:nth-child(3) {
-            transform: translateY(-9px) rotate(-45deg);
+            transform: translateY(-9px) rotate(-45deg) scale(1.3);
             background-color: var(--accent-orange);
         }
 
