@@ -286,6 +286,58 @@
             .about-lead { font-size: 16px; }
             nav { width: 75%; }
         }
+
+        /* STIL ZA LOKACIJSKU TRAKU NA DNU SAJTA */
+.lokacija-sekcija {
+    background-color: var(--bg-deep);
+    padding: 20px 15px;
+    text-align: center;
+    /* Suptilne narandžaste linije koje uokviruju lokaciju */
+    border-top: 1px solid rgba(255, 107, 0, 0.15);
+    border-bottom: 1px solid rgba(255, 107, 0, 0.15);
+    margin: 40px 0 20px 0; /* Razmak iznad i ispod trake */
+}
+
+.lokacija-sadrzaj {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Razmak između ikonice i teksta */
+}
+
+.lokacija-ikonica {
+    width: 24px;
+    height: 24px;
+    fill: var(--accent-orange); /* Ikonica svetli u boji tvog brenda */
+}
+
+.lokacija-tekst {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-light);
+    margin: 0;
+}
+
+/* Naglašavanje samog grada */
+.lokacija-grad {
+    color: var(--accent-orange);
+}
+
+/* Prilagođavanje za manje ekrane mobilnih telefona */
+@media (max-width: 480px) {
+    .lokacija-sekcija {
+        padding: 15px 10px;
+    }
+    .lokacija-tekst {
+        font-size: 13px;
+    }
+    .lokacija-ikonica {
+        width: 20px;
+        height: 20px;
+    }
+}
     </style>
 </head>
 <body>
@@ -355,7 +407,14 @@
         📞 POZOVI ODMAH: 069/3110-944
     </a>
 
-
+<div class="lokacija-sekcija">
+    <div class="lokacija-sadrzaj">
+        <svg class="lokacija-ikonica" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+        </svg>
+        <p class="lokacija-tekst">Dostupni na teritoriji <span class="lokacija-grad">Beograda i okoline</span></p>
+    </div>
+</div>
     <footer>
         <p>&copy; 2026 Kodiafix24. Sva prava zadržana.</p>
     </footer>
