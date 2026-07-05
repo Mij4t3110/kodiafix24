@@ -420,35 +420,34 @@
         <!-- Ugrađen enctype="multipart/form-data" kako bi slanje slika radilo na serveru -->
         <div class="contact-form">
             <h2>Prijavite Havariju</h2>
-            <form action="lukamijatovic96@gmail.com" method="POST" enctype="multipart/form-data">
-                
-                <div class="form-group">
-                    <label for="name">Ime i Prezime</label>
-                    <input type="text" id="name" name="name" placeholder="Vaše ime" required>
-                </div>
+            <!-- Glavni tag forme koji šalje podatke na Web3Forms server -->
+<form action="https://api.web3forms.com/submit" method="POST">
 
-                <div class="form-group">
-                    <label for="address">Tačna Adresa / Lokacija</label>
-                    <input type="text" id="address" name="address" placeholder="Ulica, broj i deo grada" required>
-                </div>
+    <!-- OVDE NALEPI TVOJ KLJUČ KOJI SI DOBIO NA MEJL -->
+    <input type="hidden" name="access_key" value="4f3f5b00-47e2-4fb6-8642-ddb86c09928b">
 
-                <div class="form-group">
-                    <label for="email">E-mail Adresa</label>
-                    <input type="email" id="email" name="email" placeholder="Vaš email" required>
-                </div>
+    <!-- Naslov mejla koji tebi stiže (tako odmah znaš da je hitan posao u pitanju) -->
+    <input type="hidden" name="subject" value="⚠️ NOVA HITNA INTERVENCIJA - Kodiafix24">
 
-                <div class="form-group">
-                    <label for="message">Opis kvara ili oštećenja</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Detaljno opišite šta je potrebno popraviti..." required></textarea>
-                </div>
+    <!-- Sakriveno polje koje sprečava botove da ti šalju spam (Honeypot) -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-                <div class="form-group">
-                    <label for="image">Uslikajte i zakačite sliku kvara (Opciono)</label>
-                    <input type="file" id="image" name="image" accept="image/*">
-                </div>
+    <!-- Polja za unos podataka (zadržavaju tvoj dizajn) -->
+    <div class="form-group">
+        <input type="text" name="Ime klijenta" placeholder="Vaše Ime i Prezime" required>
+    </div>
+    
+    <div class="form-group">
+        <input type="tel" name="Broj telefona" placeholder="Vaš Broj Telefona (npr. 06X/XXX-XXX)" required>
+    </div>
+    
+    <div class="form-group">
+        <textarea name="Opis kvara / Usluga" placeholder="Opišite šta je potrebno hitno popraviti..." required></textarea>
+    </div>
 
-                <button type="submit" class="submit-btn">Pošalji Prijavu</button>
-            </form>
+    <!-- Dugme za slanje -->
+    <button type="submit" class="inline-btn">Pošalji zahtev</button>
+</form>
         </div>
 
     </div>
