@@ -39,17 +39,18 @@
 
         /* HEADER I NAVIGACIJA */
         header {
-            background-color: var(--bg-deep);
-            padding: 20px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 2px solid var(--accent-orange);
-        }
+    background-color: var(--bg-deep);
+    padding: 0 5%; /* Padding samo levo i desno */
+    height: 70px;  /* Zaključana visina sprečava CLS */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--accent-orange);
+}
 
         .logo {
             font-size: 24px;
