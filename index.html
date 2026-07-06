@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-    <link rel="preload" as="image" href="velika-slika-za-kodiafix24.webp">
-    <link rel="icon" type="image/x-icon" href="logo.svg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- MAKSIMALNO OPTIMIZOVAN PRELOAD SLIKE SA VISOKIM PRIORITETOM NA SAMOM VRHU -->
+    <link rel="preload" as="image" href="velika-slika-za-kodiafix24.webp" fetchpriority="high">
+    <link rel="icon" type="image/x-icon" href="logo.svg">
+    
     <title>Kodiafix24 | Hitne Građevinske Intervencije 00-24h</title>
     <meta name="description" content="Kodiafix24 pruža brze i hitne građevinske intervencije od 00 do 24h. Hitne popravke krovova, vodoinstalater, električar, bravarske usluge, zamena stakla i hitno rušenje. Stižemo odmah!">
     <meta name="keywords" content="hitne intervencije, gradjevinske intervencije, hitan vodoinstalater, hitan elektricar, popravka krova, zamena brave, zamena stakla, odgusenje kanalizacije, hitno rusenje fasade, kodiafix24">
@@ -19,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- ASINHRONO (NON-BLOCKING) UČITAVANJE FONTA KOJE UKLANJA RENDER-BLOCKING OD 2 SEKUNDE -->
+    <!-- Asinhrono učitavanje fonta koje ne blokira renderovanje stranice -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"></noscript>
 
@@ -432,7 +435,7 @@
             color: var(--accent-orange);
         }
 
-        /* FOOTER - CENTRIRAN I UOKVIREN NA VREĆANOM MESTU */
+        /* FOOTER - CENTRIRAN I UOKVIREN */
         footer {
             background-color: #0f1115;
             padding: 30px 5%;
@@ -493,9 +496,9 @@
         </ul>
     </nav>
 
-    <!-- HERO SEKCIJA - SA BRZIM HTML IMG TAGOM I FETCHPRIORITY -->
+    <!-- HERO SEKCIJA - DODATE EKSPLICITNE DIMENZIJE ZA BRZI LCP DISCOVERY -->
     <section class="hero">
-        <img src="velika-slika-za-kodiafix24.webp" alt="Hitne građevinske intervencije" class="hero-bg-img" fetchpriority="high">
+        <img src="velika-slika-za-kodiafix24.webp" alt="Hitne građevinske intervencije" class="hero-bg-img" fetchpriority="high" width="1200" height="675">
         <h1>Hitne Intervencije <span>00-24h</span></h1>
         <p>Kodiafix24 je vaša sigurna pomoć u kriznim situacijama. Naš tim licenciranih majstora i građevinskih stručnjaka izlazi na teren odmah po pozivu. Rešavamo sve vrste havarija na stambenim i poslovnim objektima brzo, efikasno i bez odlaganja.</p>
     </section>
@@ -547,7 +550,7 @@
                 <p>Problemi sa električnim instalacijama i osiguračima direktno ugrožavaju bezbednost objekta i ukućana. Naši električari rešavaju sve vrste kvarova na elektroinstalacijama bezbedno i po propisima.</p>
                 <ul>
                     <li>Hitna zamena svih vrsta osigurača i neispravnih sklopki</li>
-                    <li>Zamena utičnica, prekidača i rešavanje kratkih osova</li>
+                    <li>Zamena utičnica, prekidača i rešavanje kratkih spojeva</li>
                     <li>Zamena sijalica svih vrsta (LED paneli, G10, halogene, obične)</li>
                     <li>Hitno razvlačenje dodatne elektroinstalacije za kamere i mreže</li>
                 </ul>
@@ -587,7 +590,7 @@
         </div>
     </section>
 
-    <!-- LOKACIJSKA TRAKA - POTPUNO INTEGRISANA -->
+    <!-- LOKACIJSKA TRAKA -->
     <div class="lokacija-sekcija">
         <div class="lokacija-sadrzaj">
             <svg class="lokacija-ikonica" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -602,7 +605,7 @@
         📞 POZOVI ODMAH: 069/3110-944
     </a>
 
-    <!-- FOOTER - SADA PRAVILNO CENTRIRAN SA GORNJOM LINIJOM -->
+    <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 Kodiafix24. Sva prava zadržana.</p>
     </footer>
