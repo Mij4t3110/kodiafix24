@@ -78,7 +78,8 @@
         /* HEADER I NAVIGACIJA */
         header {
             background-color: var(--bg-deep);
-            padding: 20px 5%;
+            padding: 0 5%;
+            height: 70px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -404,7 +405,7 @@
 }
 
 /* Prilagođavanje za manje ekrane mobilnih telefona */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .lokacija-sekcija {
         padding: 15px 10px;
     }
@@ -429,8 +430,8 @@
 
         /* RESPONSIVENESS (MOBILNI I TABLETI) */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 30px; }
-            .hero p { font-size: 15px; }
+            .hero h1 { font-size: 28px; }
+            .hero p { font-size: 14px; line-height: 1.5; }
             nav { width: 75%; } /* Zauzima 75% ekrana na telefonu */
             .section-title { font-size: 26px; }
         }
