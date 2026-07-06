@@ -15,11 +15,15 @@
     <meta property="og:description" content="Profesionalne i brze hitne intervencije na objektima. Vodoinstalater, struja, krovovi, brave i bezbednost struktura. Dostupni 24/7.">
     <meta property="og:url" content="https://kodiafix24.rs">
 
+    <!-- Preconnect za Google Fonts infrastrukturu -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=fallback" rel="stylesheet">
+    <!-- ASINHRONO (NON-BLOCKING) UČITAVANJE FONTA KOJE UKLANJA RENDER-BLOCKING OD 2 SEKUNDE -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"></noscript>
 
+    <!-- Schema.org Struktuirani podaci za SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -64,7 +68,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
@@ -428,7 +432,7 @@
             color: var(--accent-orange);
         }
 
-        /* FOOTER - CENTRIRAN I UOKVIREN */
+        /* FOOTER - CENTRIRAN I UOKVIREN NA VREĆANOM MESTU */
         footer {
             background-color: #0f1115;
             padding: 30px 5%;
@@ -461,6 +465,7 @@
 </head>
 <body>
 
+    <!-- HEADER & NAVIGACIJA -->
     <header>
         <a href="index.html" class="logo">Kodia<span>fix24</span></a>
         <div class="burger-menu" id="burgerMenu">
@@ -488,19 +493,22 @@
         </ul>
     </nav>
 
+    <!-- HERO SEKCIJA - SA BRZIM HTML IMG TAGOM I FETCHPRIORITY -->
     <section class="hero">
         <img src="velika-slika-za-kodiafix24.webp" alt="Hitne građevinske intervencije" class="hero-bg-img" fetchpriority="high">
         <h1>Hitne Intervencije <span>00-24h</span></h1>
         <p>Kodiafix24 je vaša sigurna pomoć u kriznim situacijama. Naš tim licenciranih majstora i građevinskih stručnjaka izlazi na teren odmah po pozivu. Rešavamo sve vrste havarija na stambenim i poslovnim objektima brzo, efikasno i bez odlaganja.</p>
     </section>
 
+    <!-- USLUGE SEKCIJA (SEO OPTIMIZOVAN TEKST) -->
     <section class="services">
         <h2 class="section-title">Naše Hitne Intervencije</h2>
         <div class="services-grid">
             
+            <!-- KROVOVI i HIDROIZOLACIJA -->
             <div class="service-card">
                 <h3>Hitna Popravka Krovova</h3>
-                <p>Nakon jakih oluja, vetrova ili dugotrajnih padavina, oštećenja na krovu mogu ugroziti unutrašnjost objekta. Vršimo hitne popravke krovova od svih vrsta materiala, sprečavajući dalju štetu i prokišnjavanje.</p>
+                <p>Nakon jakih oluja, vetrova ili dugotrajnih padavina, oštećenja na krovu mogu ugroziti unutrašnjost objekta. Vršimo hitne popravke krovova od svih vrsta materijala, sprečavajući dalju štetu i prokišnjavanje.</p>
                 <ul>
                     <li>Premazivanje hidroizolacije na ravnim krovovima i terasama</li>
                     <li>Zamena puknutih, pomerenih ili odletelih crepova</li>
@@ -509,6 +517,7 @@
                 </ul>
             </div>
 
+            <!-- VODOINSTALATER -->
             <div class="service-card">
                 <h3>Hitne Vodoinstalaterske Usluge</h3>
                 <p>Pucanje cevi ili zagušenje kanalizacije zahteva momentalnu reakciju kako bi se sprečila poplava i uništavanje imovine. Naš vodoinstalaterski tim opremljen je najmodernijim alatima za brzu detekciju i sanaciju.</p>
@@ -520,6 +529,7 @@
                 </ul>
             </div>
 
+            <!-- BRAVARIJA I STAKLO -->
             <div class="service-card">
                 <h3>Hitne Bravarske Usluge i Staklo</h3>
                 <p>Bilo da je reč o posledicama olujnog nevremena ili obijanju lokala, stanova i kuća, obezbeđujemo vaš prostor u najkraćem roku. Vraćamo sigurnost vašem domu ili poslovnom prostoru.</p>
@@ -531,17 +541,19 @@
                 </ul>
             </div>
 
+            <!-- ELEKTRIČAR -->
             <div class="service-card">
                 <h3>Hitne Električarske Usluge</h3>
                 <p>Problemi sa električnim instalacijama i osiguračima direktno ugrožavaju bezbednost objekta i ukućana. Naši električari rešavaju sve vrste kvarova na elektroinstalacijama bezbedno i po propisima.</p>
                 <ul>
                     <li>Hitna zamena svih vrsta osigurača i neispravnih sklopki</li>
-                    <li>Zamena utičnica, prekidača i rešavanje kratkih spojeva</li>
+                    <li>Zamena utičnica, prekidača i rešavanje kratkih osova</li>
                     <li>Zamena sijalica svih vrsta (LED paneli, G10, halogene, obične)</li>
                     <li>Hitno razvlačenje dodatne elektroinstalacije za kamere i mreže</li>
                 </ul>
             </div>
 
+            <!-- RUŠENJE I BEZBEDNOST -->
             <div class="service-card">
                 <h3>Hitno Rušenje i Bezbednost</h3>
                 <p>Uklanjamo sve delove struktura koji su usled starosti, dotrajalosti ili loše ugradnje postali rizični za korisnike objekta i prolaznike. Delujemo preventivno i bezbedno.</p>
@@ -556,6 +568,7 @@
         </div>
     </section>
 
+    <!-- KRAĆA PREDNOST SEKCIJA -->
     <section class="advantages">
         <h2 class="section-title">Zašto Kodiafix24?</h2>
         <div class="adv-grid">
@@ -574,6 +587,7 @@
         </div>
     </section>
 
+    <!-- LOKACIJSKA TRAKA - POTPUNO INTEGRISANA -->
     <div class="lokacija-sekcija">
         <div class="lokacija-sadrzaj">
             <svg class="lokacija-ikonica" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -583,14 +597,17 @@
         </div>
     </div>
 
+    <!-- STICKY DUGME ZA POZIV (PLUTA KAKO SE SKROLUJE) -->
     <a href="tel:+381693110944" class="sticky-call-btn">
         📞 POZOVI ODMAH: 069/3110-944
     </a>
 
+    <!-- FOOTER - SADA PRAVILNO CENTRIRAN SA GORNJOM LINIJOM -->
     <footer>
         <p>&copy; 2026 Kodiafix24. Sva prava zadržana.</p>
     </footer>
 
+    <!-- JAVASCRIPT ZA GLAVNI MENI I HARMONIKA PODMENI -->
     <script>
         const burgerMenu = document.getElementById('burgerMenu');
         const sideMenu = document.getElementById('sideMenu');
