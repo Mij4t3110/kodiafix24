@@ -9,11 +9,11 @@
     <meta name="keywords" content="odrzavanje zgrada beograd, tehnicko odrzavanje stambenih zajednica, profesionalni upravnici, popravka interfona beograd, zamena automata na vratima, hitne popravke zgrade, kodiafix24">
     <meta name="robots" content="index, follow">
 
+    <!-- Nova dijeta za fontove: povlači samo 400 i 700 i drastično smanjuje KiB -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"></noscript>
-
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"></noscript>
     <style>
         /* PODEŠAVANJE OSNOVE - STROGO IDENTIČNO KAO NA OSTALIM STRANICAMA */
         :root {
@@ -57,7 +57,7 @@
 
         .logo {
             font-size: 24px;
-            font-weight: 800;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
             color: var(--text-light);
@@ -135,7 +135,7 @@
             color: var(--text-light);
             text-decoration: none;
             font-size: 18px;
-            font-weight: 600;
+            font-weight: 700;
             transition: color 0.2s;
             display: block;
         }
@@ -182,7 +182,7 @@
 
         .page-container h1 {
             font-size: 38px;
-            font-weight: 800;
+            font-weight: 700;
             margin-bottom: 20px;
             text-transform: uppercase;
             border-bottom: 2px solid var(--accent-orange);
@@ -301,6 +301,7 @@
             transform: translateX(-50%); /* Savršeno centriranje na sredinu */
             width: 90%;                /* Širina na mobilnim telefonima */
             max-width: 400px;          /* Maksimalna širina da se ne bi previše raširilo na kompjuteru */
+            height: 56px;
             background-color: var(--accent-orange);
             color: #14171c;
             text-align: center;
