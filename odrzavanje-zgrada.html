@@ -4,12 +4,11 @@
     <link rel="icon" type="image/x-icon" href="logo.svg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hitne Bravarske Usluge i Zamena Stakla Beograd | Kodiafix24</title>
-    <meta name="description" content="Hitne bravarske usluge i zamena stakla od 00 do 24h. Hitno otvaranje brava bez oštećenja, zamena cilindara nakon provala, zastakljivanje prozora i izloga. Dolazak odmah.">
-    <meta name="keywords" content="hitni bravar, otvaranje brava beograd, zamena brave, zaglavljen kljuc, hitno zastakljivanje, polomljen izlog, sigurnosna vrata popravka, kodiafix24">
+    <title>Tehničko Održavanje Zgrada Beograd | Hitne Intervencije | Kodiafix24</title>
+    <meta name="description" content="Profesionalno tehničko održavanje stambenih zgrada od 00 do 24h. Hitne popravke vertikala, servis interfona, ulaznih vrata i krovova za upravnike i stanare. Plaćanje preko računa.">
+    <meta name="keywords" content="odrzavanje zgrada beograd, tehnicko odrzavanje stambenih zajednica, profesionalni upravnici, popravka interfona beograd, zamena automata na vratima, hitne popravke zgrade, kodiafix24">
     <meta name="robots" content="index, follow">
 
-    <!-- Google Fontovi -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -41,18 +40,18 @@
 
         /* HEADER I NAVIGACIJA */
         header {
-    background-color: var(--bg-deep);
-    padding: 0 5%; /* Padding samo levo i desno */
-    height: 70px;  /* Zaključana visina sprečava CLS */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 2px solid var(--accent-orange);
-}
+            background-color: var(--bg-deep);
+            padding: 0 5%; /* Padding samo levo i desno */
+            height: 70px;  /* Zaključana visina sprečava CLS */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--accent-orange);
+        }
 
         .logo {
             font-size: 24px;
@@ -94,7 +93,7 @@
         .burger-menu.open span:nth-child(2) {
             opacity: 0;
             transform: scaleX(0) !important; /* Ovo je ključ! Skuplja crticu horizontalno na nulu */
-    transition: transform 0.2s ease, opacity 0.2s ease;
+            transition: transform 0.2s ease, opacity 0.2s ease;
         }
 
         .burger-menu.open span:nth-child(3) {
@@ -159,7 +158,7 @@
         }
 
         .submenu.open {
-            max-height: 300px;
+            max-height: 350px;
         }
 
         .submenu li {
@@ -293,90 +292,90 @@
         }
 
         /* MODERNO PLUTAJUĆE DUGME SA ZAKRIVLJENIM IVICAMA */
-.sticky-call-btn {
-    position: fixed;
-    bottom: 20px;              /* Odmaknuto od samog dna ekrana */
-    left: 50%;                 /* Centriranje */
-    transform: translateX(-50%); /* Savršeno centriranje na sredinu */
-    width: 90%;                /* Širina na mobilnim telefonima */
-    max-width: 400px;          /* Maksimalna širina da se ne bi previše raširilo na kompjuteru */
-    background-color: var(--accent-orange);
-    color: var(--text-light);
-    text-align: center;
-    text-decoration: none;
-    padding: 15px 25px;        /* Komotan prostor unutar dugmeta */
-    font-size: 18px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    z-index: 1000;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.5); /* Jača senka jer dugme sada "lebdi" */
-    transition: background-color 0.2s, transform 0.2s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 50px;       /* Potpuno zaobljene ivice (oblik pilule/pravougaonika) */
-}
+        .sticky-call-btn {
+            position: fixed;
+            bottom: 20px;              /* Odmaknuto od samog dna ekrana */
+            left: 50%;                 /* Centriranje */
+            transform: translateX(-50%); /* Savršeno centriranje na sredinu */
+            width: 90%;                /* Širina na mobilnim telefonima */
+            max-width: 400px;          /* Maksimalna širina da se ne bi previše raširilo na kompjuteru */
+            background-color: var(--accent-orange);
+            color: var(--text-light);
+            text-align: center;
+            text-decoration: none;
+            padding: 15px 25px;        /* Komotan prostor unutar dugmeta */
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 1000;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.5); /* Jača senka jer dugme sada "lebdi" */
+            transition: background-color 0.2s, transform 0.2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 50px;       /* Potpuno zaobljene ivice (oblik pilule/pravougaonika) */
+        }
 
-/* EFEKAT KADA SE PREĐE MIŠEM ILI KLIKNE PRSTOM */
-.sticky-call-btn:hover {
-    background-color: var(--accent-hover);
-    /* Zadržavamo centriranje i dodajemo blago povećanje za bolji osećaj kliktaja */
-    transform: translateX(-50%) scale(1.03); 
-}
+        /* EFEKAT KADA SE PREĐE MIŠEM ILI KLIKNE PRSTOM */
+        .sticky-call-btn:hover {
+            background-color: var(--accent-hover);
+            /* Zadržavamo centriranje i dodajemo blago povećanje za bolji osećaj kliktaja */
+            transform: translateX(-50%) scale(1.03); 
+        }
 
         /* STIL ZA LOKACIJSKU TRAKU NA DNU SAJTA */
-.lokacija-sekcija {
-    background-color: var(--bg-deep);
-    padding: 20px 15px;
-    text-align: center;
-    /* Suptilne narandžaste linije koje uokviruju lokaciju */
-    border-top: 1px solid rgba(255, 107, 0, 0.15);
-    border-bottom: 1px solid rgba(255, 107, 0, 0.15);
-    margin: 40px 0 20px 0; /* Razmak iznad i ispod trake */
-}
+        .lokacija-sekcija {
+            background-color: var(--bg-deep);
+            padding: 20px 15px;
+            text-align: center;
+            /* Suptilne narandžaste linije koje uokviruju lokaciju */
+            border-top: 1px solid rgba(255, 107, 0, 0.15);
+            border-bottom: 1px solid rgba(255, 107, 0, 0.15);
+            margin: 40px 0 20px 0; /* Razmak iznad i ispod trake */
+        }
 
-.lokacija-sadrzaj {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px; /* Razmak između ikonice i teksta */
-}
+        .lokacija-sadrzaj {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px; /* Razmak između ikonice i teksta */
+        }
 
-.lokacija-ikonica {
-    width: 24px;
-    height: 24px;
-    fill: var(--accent-orange); /* Ikonica svetli u boji tvog brenda */
-}
+        .lokacija-ikonica {
+            width: 24px;
+            height: 24px;
+            fill: var(--accent-orange); /* Ikonica svetli u boji tvog brenda */
+        }
 
-.lokacija-tekst {
-    font-size: 15px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: var(--text-light);
-    margin: 0;
-}
+        .lokacija-tekst {
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-light);
+            margin: 0;
+        }
 
-/* Naglašavanje samog grada */
-.lokacija-grad {
-    color: var(--accent-orange);
-}
+        /* Naglašavanje samog grada */
+        .lokacija-grad {
+            color: var(--accent-orange);
+        }
 
-/* Prilagođavanje za manje ekrane mobilnih telefona */
-@media (max-width: 480px) {
-    .lokacija-sekcija {
-        padding: 15px 10px;
-    }
-    .lokacija-tekst {
-        font-size: 13px;
-    }
-    .lokacija-ikonica {
-        width: 20px;
-        height: 20px;
-    }
-}
+        /* Prilagođavanje za manje ekrane mobilnih telefona */
+        @media (max-width: 480px) {
+            .lokacija-sekcija {
+                padding: 15px 10px;
+            }
+            .lokacija-tekst {
+                font-size: 13px;
+            }
+            .lokacija-ikonica {
+                width: 20px;
+                height: 20px;
+            }
+        }
 
         /* FOOTER */
         footer {
@@ -396,15 +395,14 @@
             nav { width: 75%; }
         }
 
-         a {
-    text-decoration: none; /* Sklanja podvučenu liniju */
-    color: inherit;        /* Uzima boju teksta koja je već bila tu */
-}
+        a {
+            text-decoration: none; /* Sklanja podvučenu liniju */
+            color: inherit;        /* Uzima boju teksta koja je već bila tu */
+        }
     </style>
 </head>
 <body>
 
-    <!-- HEADER & NAVIGACIJA -->
     <header>
         <a href="index.html" class="logo">Kodia<span>fix24</span></a>
         <div class="burger-menu" id="burgerMenu">
@@ -428,82 +426,77 @@
                     <li><a href="hitna-popravka-krova.html">Popravka Krova</a></li>
                     <li><a href="hitne-bravarske-usluge-staklo.html">Bravarija i Staklo</a></li>
                     <li><a href="hitno-rusenje-bezbednost.html">Rušenje i Bezbednost</a></li>
+                    
+                    
                 </ul>
             </li>
             <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
     </nav>
 
-    <!-- GLAVNI SEO SADRŽAJ STRANICE -->
     <div class="page-container">
-        <h1>Hitne Bravarske Usluge i <span>Zamena Stakla</span></h1>
+        <h1>Tehničko Održavanje <span>Stambenih Zgrada</span></h1>
         
         <div class="intro-box">
-            <p>Ostali ste zaključani ispred sopstvenog stana usred noći? Ključ vam je pukao u bravi, ili ste doživeli neprijatnost u vidu provale i lomljenja stakala na prozorima i izlozima? Ovakve krizne situacije zahtevaju diskretnu, brzu i pre svega profesionalnu asistenciju. Kodiafix24 nudi kompletne hitne bravarske i staklorezačke usluge 00-24h na teritoriji celog grada. Naše mobilne ekipe stižu na vašu adresu opremljene za rešavanje najkomplikovanijih blokada i oštećenja.</p>
+            <p>Problemi sa zajedničkim instalacijama u zgradi zahtevaju hitnu, sinhronizovanu i potpuno profesionalnu reakciju. Pucanje glavne vodovodne vertikale, havarije na zajedničkoj elektro-mreži, neispravni interfoni ili zaglavljena ulazna vrata direktno utiču na bezbednost i kvalitet života svih stanara. Kodiafix24 nudi sveobuhvatno rešenje za stambene zajednice, profesionalne upravnike i privatne predsednike stanara. Naš tim je dostupan od 00 do 24h za rešavanje svih hitnih i tekućih tehničkih problema u zgradama, uz potpunu pravno-finansijsku transparentnost i izdavanje računa za stambene zajednice.</p>
         </div>
 
-        <h2 class="section-headline">Nedestruktivno otvaranje vrata i brza sanacija</h2>
+        <h2 class="section-headline">Pouzdan partner za upravnike i maksimalan komfor za stanare</h2>
         <div class="text-block">
-            <p>Najveći strah svakog vlasnika koji je izgubio ključ jeste da će mu divlji majstori potpuno uništiti skupa sigurnosna vrata prilikom obijanja. Naš tim primenjuje isključivo napredne, nedestruktivne metode otvaranja vrata (tzv. "lockpicking" tehnike i specijalni dekoderi), koje nam omogućavaju da bravu otvorimo bez ijedne ogrebotine na krilu ili štoku vrata, kad god je to tehnički moguće.</p>
-            <p>Takođe, kada je u pitanju polomljeno staklo na stambenim ili komercijalnim objektima, naš prioritet je hitno uklanjanje opasnih krhotina i postavljanje nove staklene površine kako bismo zaštitili vašu imovinu od spoljnih uticaja i neželjenih upada.</p>
+            <p>Profesionalni i privatni upravnici se svakodnevno suočavaju sa neprofesionalnim majstorima, kašnjenjima i nemogućnošću legalnog plaćanja preko računa zgrade. Kodiafix24 eliminiše te prepreke. Svesni smo da kvar na hidrauličnom automatu ulaznih vrata ili kvar sistema kontrole pristupa ostavlja zgradu nezaštićenom i izloženom vandalizmu, dok zapušeni oluci i prokišnjavanje krova nanose ogromnu materijalnu štetu stanarima na višim spratovima.</p>
+            <p>Naš pristup kombinuje brzu dijagnostiku, korišćenje industrijskih alata najnovije generacije i hitan izlazak na teren. Bez obzira da li je u pitanju pojedinačni poziv zabrinutog stanara ili zvanični nalog upravnika stambene zajednice, garantujemo profesionalnu sanaciju kvarova i dugoročnu stabilnost svih popravljenih sistema.</p>
         </div>
 
-        <h2 class="section-headline">Naše Specijalizovane Hitne Intervencije</h2>
+        <h2 class="section-headline">Naše Specijalizovane Intervencije u Zgradama</h2>
         
         <div class="sub-services-list">
             
-            <!-- STAVKA 1: OTVARANJE BRAVA -->
             <div class="sub-service-item">
-                <h3>Hitno Otvaranje i Deblokada Brava bez Oštećenja Vrata</h3>
-                <p>Bilo da ste ključeve zaboravili u stanu, izgubili ih ili vam je mehanizam potpuno blokirao, naš dežurni bravar rešava problem u najkraćem roku. Uspešno otvaramo standardne, drvene, metalne, kao i visoko-sigurnosne kase i blindirana vrata. Koristimo profesionalni alat koji garantuje očuvanje integriteta vaših vrata i štedi vas dodatnih troškova reparacije.</p>
+                <h3>Hitne Popravke Zajedničkih Instalacija (Voda, Kanalizacija, Struja)</h3>
+                <p>Havarije na glavnim vertikalama zgrade mogu ugroziti na desetine stanova istovremeno. Vršimo hitno lociranje i sanaciju puknutih cevi pod pritiskom, mašinsko odgušenje zajedničkih vertikala kanalizacije, kao i rešavanje kompleksnih kvarova na zajedničkoj elektro-mreži zgrade (glavni razvodni ormari, stepenišno svetlo, senzorska rasveta i osvetljenje u podzemnim garažama).</p>
             </div>
 
-            <!-- STAVKA 2: ZAMENA CILINDARA I OKOVA -->
             <div class="sub-service-item">
-                <h3>Zamena Cilindara, Brave i Ugradnja nakon Provala</h3>
-                <p>Nakon pokušaja ili izvršene provale, bezbednost vašeg prostora je trajno narušena. Vršimo hitan izlazak na teren, uklanjanje oštećenih delova mehanizma i momentalnu ugradnju novih, visokokvalitetnih cilindara sa zaštićenim profilima, sigurnosnih brava i štitnika koji onemogućavaju lomljenje i bušenje jezgra brave.</p>
+                <h3>Servis Ulaznih Vrata, Zamena Hidrauličnih Automata i Elektro-Bravica</h3>
+                <p>Ulazna vrata stambene zgrade se otvore na stotine puta dnevno, što dovodi do brzog habanja mehanizama. Vršimo brzu zamenu i precizno štelovanje hidrauličnih automata za zatvaranje vrata, zamenu oštećenih šarki, popravku brava i ugradnju visokokvalitetnih elektro-prihvatnika (bravica) koji trpe velika svakodnevna opterećenja.</p>
             </div>
 
-            <!-- STAVKA 3: ZAMENA STAKLA I IZLOGA -->
             <div class="sub-service-item">
-                <h3>Hitno Zastakljivanje, Zamena Stakla na Prozorima i Izlozima</h3>
-                <p>Polomljen prozor tokom zime ili razbijen izlog prodavnice zahtevaju hitnu staklorezačku intervenciju radi obezbeđivanja unutrašnjosti. Naš tim vrši brzo merenje, krojenje i ugradnju termoizolacionog, lameliranog ili kaljenog stakla na licu mesta. Ukoliko specifičnost stakla zahteva fabričku izradu, vršimo hitno privremeno zatvaranje otvora zaštitnim panelima.</p>
+                <h3>Održavanje Interfonskih Sistema i Kontrole Pristupa (Tagovi i Šifratori)</h3>
+                <p>Neispravan interfon direktno narušava bezbednost zgrade. Naš tim uspešno rešava probleme sa unutrašnjim i spoljnim jedinicama interfona, kvarove na ožičenju, naponskim jedinicama i centralama. Takođe vršimo ugradnju i programiranje modernih RFID čitača (otključavanje na tag/karticu) i tastatura za unos šifre, kao i izradu zamenskih tagova za stanare.</p>
             </div>
 
-            <!-- STAVKA 4: ROLO VRATA I KAPIJE -->
             <div class="sub-service-item">
-                <h3>Deblokada i Hitna Popravka Rolo Vrata i Sigurnosnih Kapija</h3>
-                <p>Kvar na motoru ili pucanje opruge na rolo vratima garaže ili lokala može potpuno blokirati vaš automobil ili poslovanje. Naši majstori vrše hitnu deblokadu elektromotora, prebacivanje na ručni mod rada, kao i brzu zamenu kritičnih mehaničkih i elektronskih delova (prijemnika, centrala, daljinskih upravljača) kako bi se sistem odmah vratio u funkciju.</p>
+                <h3>Sanacija Prokišnjavanja Krovova, Čišćenje Oluka i Limarske Radove</h3>
+                <p>Prokišnjavanje sa ravnih ili kosih krovova zgrade zahteva hitno reagovanje pre nego što se vlaga proširi na stanove. Vršimo lokalnu sanaciju hidroizolacije, popravku oštećenih delova krova, kao i hitno čišćenje i pranje zapušenih vertikalnih i horizontalnih oluka od lišća i nanosa, čime sprečavamo prelivanje vode na fasadu zgrade.</p>
             </div>
 
         </div>
 
-        <!-- UGRAĐEN WARNING POZIV ZA BRZU KONVERZIJU KORISNIKA -->
         <div class="warning-box">
-            <h4>Zaključani ste ili Vam je Razbijen Prozor?</h4>
-            <p>Nemojte sami pokušavati da razbijete bravu ili staklo i rizikujete povrede i skupu štetu. Pozovite nas – naša ekipa stiže na vašu adresu u najkraćem roku.</p>
+            <h4>Imate Kvar na Zajedničkim Instalacijama ili Sistemima u Zgradi?</h4>
+            <p>Bilo da ste profesionalni upravnik koji hitno treba pouzdanu ekipu ili stanar koji je uočio problem u ulazu, ne prepuštajte rešavanje amaterima. Pozovite nas – vršimo hitan izlazak na teren i dostavljamo zvaničnu ponudu i račun za stambenu zajednicu.</p>
             <a href="tel:+381693110944" class="inline-btn">Pozovite Kodiafix24 tim: 069/3110-944</a>
         </div>
     </div>
 
-    <!-- STICKY DUGME ZA POZIV -->
     <a href="tel:+381693110944" class="sticky-call-btn">
         📞 POZOVI ODMAH: 069/3110-944
     </a>
+
     <div class="lokacija-sekcija">
-    <div class="lokacija-sadrzaj">
-        <svg class="lokacija-ikonica" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-        </svg>
-        <p class="lokacija-tekst">Dostupni na teritoriji <span class="lokacija-grad">Beograda i okoline</span></p>
+        <div class="lokacija-sadrzaj">
+            <svg class="lokacija-ikonica" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            <p class="lokacija-tekst">Dostupni na teritoriji <span class="lokacija-grad">Beograda i okoline</span></p>
+        </div>
     </div>
-</div>
-    <!-- FOOTER -->
+
     <footer>
         <p>&copy; 2026 Kodiafix24. Sva prava zadržana.</p>
     </footer>
 
-    <!-- JAVASCRIPT -->
     <script>
         const burgerMenu = document.getElementById('burgerMenu');
         const sideMenu = document.getElementById('sideMenu');
