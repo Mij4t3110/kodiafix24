@@ -369,28 +369,30 @@
         /* MODERNO PLUTAJUĆE DUGME SA ZAKRIVLJENIM IVICAMA */
         .sticky-call-btn {
             position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 400px;
+            bottom: 20px;              /* Odmaknuto od samog dna ekrana */
+            left: 50%;                 /* Centriranje */
+            transform: translateX(-50%); /* Savršeno centriranje na sredinu */
+            width: 90%;                /* Širina na mobilnim telefonima */
+            max-width: 400px;          /* Maksimalna širina da se ne bi previše raširilo na kompjuteru */
+            height: 56px;
             background-color: var(--accent-orange);
             color: #14171c;
             text-align: center;
             text-decoration: none;
-            padding: 15px 25px;
-            font-size: 18px;
-            font-weight: 800;
+            padding: 15px 25px;        /* Komotan prostor unutar dugmeta */
+            font-size: 16px;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
             z-index: 1000;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.5); /* Jača senka jer dugme sada "lebdi" */
             transition: background-color 0.2s, transform 0.2s;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 10px;
-            border-radius: 50px;
+            border-radius: 50px;       /* Potpuno zaobljene ivice (oblik pilule/pravougaonika) */
+            box-sizing: border-box;
         }
 
         .sticky-call-btn:hover {
