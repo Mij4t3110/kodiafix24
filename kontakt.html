@@ -575,5 +575,29 @@
   "description": "Kontakt telefon za hitne intervencije 00-24h, lokacija sedišta Golsvordijeva 27 i zvanični podaci firme."
 }
 </script>
+
+<!-- Cookie Obaveštenje -->
+<div id="cookie-banner" class="cookie-banner">
+    <p>Ovaj sajt koristi kolačiće (cookies) za praćenje poseta i poboljšanje korisničkog iskustva. Nastavkom korišćenja sajta saglasni ste sa njihovom upotrebom.</p>
+    <button id="accept-cookies" class="cookie-btn">Prihvatam</button>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Proverava da li u lokalnoj memoriji pregledača već postoji pristanak
+        if (!localStorage.getItem("kolaciciPrihvaceni")) {
+            // Ako ne postoji, prikazuje baner
+            document.getElementById("cookie-banner").style.display = "flex";
+        }
+
+        // Šta se dešava kada korisnik klikne na dugme
+        document.getElementById("accept-cookies").addEventListener("click", function() {
+            // Upisuje pristanak u memoriju
+            localStorage.setItem("kolaciciPrihvaceni", "da");
+            // Sklanja baner
+            document.getElementById("cookie-banner").style.display = "none";
+        });
+    });
+</script>
 </body>
 </html>

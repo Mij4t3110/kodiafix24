@@ -423,6 +423,53 @@
             nav { width: 75%; }
         }
 
+        /* --- Cookie Baner --- */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #222222; /* Tamno siva pozadina */
+    color: #ffffff;
+    padding: 15px 20px;
+    display: none; /* Skriveno po defaultu dok JS ne proveri da li je već prihvaćeno */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 9999;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+}
+
+.cookie-banner p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.cookie-btn {
+    background-color: #ff6600; /* Tvoja narandžasta boja */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.cookie-btn:hover {
+    background-color: #e65c00;
+}
+
+/* Prilagođavanje za mobilne telefone */
+@media (max-width: 786px) {
+    .cookie-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 15px;
+    }
+}
+
         
     </style>
 </head>
@@ -577,6 +624,30 @@
     "closes": "23:59"
   }
 }
+</script>
+
+<!-- Cookie Obaveštenje -->
+<div id="cookie-banner" class="cookie-banner">
+    <p>Ovaj sajt koristi kolačiće (cookies) za praćenje poseta i poboljšanje korisničkog iskustva. Nastavkom korišćenja sajta saglasni ste sa njihovom upotrebom.</p>
+    <button id="accept-cookies" class="cookie-btn">Prihvatam</button>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Proverava da li u lokalnoj memoriji pregledača već postoji pristanak
+        if (!localStorage.getItem("kolaciciPrihvaceni")) {
+            // Ako ne postoji, prikazuje baner
+            document.getElementById("cookie-banner").style.display = "flex";
+        }
+
+        // Šta se dešava kada korisnik klikne na dugme
+        document.getElementById("accept-cookies").addEventListener("click", function() {
+            // Upisuje pristanak u memoriju
+            localStorage.setItem("kolaciciPrihvaceni", "da");
+            // Sklanja baner
+            document.getElementById("cookie-banner").style.display = "none";
+        });
+    });
 </script>
 </body>
 </html>
