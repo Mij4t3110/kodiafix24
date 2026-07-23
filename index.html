@@ -68,18 +68,27 @@
             border-bottom: 2px solid var(--accent-orange);
         }
 
-        .logo {
-            font-size: 24px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-light);
-            text-decoration: none;
-        }
+        /* Kontejner za logo i tekst */
+.logo-link {
+    display: inline-flex;
+    align-items: center;    /* Centrira sliku i tekst po vertikali */
+    gap: 10px;               /* Razmak između logoa i teksta */
+    text-decoration: none;  /* Skida podvučenu liniju sa linka */
+}
 
-        .logo span {
-            color: var(--accent-orange);
-        }
+/* Stil za samu sličicu logoa */
+.logo-img {
+    height: 38px;            /* Podesi visinu po želji (npr. 35px - 45px) */
+    width: auto;             /* Čuva originalne proporcije slike */
+    display: block;
+}
+
+/* Stil za tekst pored logoa */
+.logo-text {
+    font-size: 1.4rem;       /* Veličina slova */
+    font-weight: 800;        /* Debljina slova */
+    color: #ffffff;          /* Promeni boju u zavisnosti od tvoje teme */
+}
 
         /* BURGER MENI ANIMACIJA */
         .burger-menu {
